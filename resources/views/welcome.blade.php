@@ -94,7 +94,7 @@
             </div>
 
             <nav class="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-                <a href="#" class="text-gold-glow border-b border-gold-glow/50 pb-1">Home</a>
+                <a href="#" class="text-gold-glow border-b border-gold-glow/50 pb-1">welcome</a>
                 <a href="{{ url('/about') }}" class="{{ Request::is('about') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">
                     About
                 </a>

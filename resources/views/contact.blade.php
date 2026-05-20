@@ -84,7 +84,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span class="text-[10px] text-white font-black uppercase tracking-[0.3em]">Open to work</span>
+                <span class="text-[10px] text-white font-black uppercase tracking-[0.3em]">Open to Work</span>
             </div>
         </div>
     </div>

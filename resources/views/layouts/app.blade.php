@@ -37,17 +37,17 @@
 </head>
 <body class="overflow-x-hidden min-h-screen">
 
-    <header class="w-full fixed top-0 z-50 bg-dark-obsidian/20 backdrop-blur-lg">
-        <div class="container mx-auto px-10 py-8 flex justify-between items-center">
-            <a href="{{ url('/') }}" class="flex items-center gap-2 group">
-                <div class="flex items-center gap-3 group cursor-pointer relative">
-
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-obsidian/20 backdrop-blur-lg border-b border-white/5">
+    <div class="container mx-auto px-10 py-8 flex justify-between items-center">
+        <a href="{{ url('/') }}" class="flex items-center gap-2 group">
+            <div class="flex items-center gap-3 group cursor-pointer relative">
                 <div class="relative group-hover:scale-110 transition-transform duration-300 ease-out">
                     <svg width="26" height="30" viewBox="0 0 110 128" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-auto">
                         <defs>
                             <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#fff" />
-                                <stop offset="100%" stop-color="#d4af37" /> </linearGradient>
+                                <stop offset="100%" stop-color="#d4af37" />
+                            </linearGradient>
                             <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
                                 <feGaussianBlur stdDeviation="3" result="blur" />
                                 <feFlood flood-color="#d4af37" flood-opacity="0.3" result="glowColor"/>
@@ -70,24 +70,48 @@
                         </g>
                     </svg>
                 </div>
-
-                <span class="text-xl font-bold tracking-tight italic relative top-[1px]">Nevan Syah Akbar</span>
+                <span class="text-xl font-bold tracking-tight italic relative top-[1px] text-white">Nevan Syah Akbar</span>
             </div>
-            </a>
+        </a>
 
-            <nav class="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-                <a href="{{ url('/') }}" class="{{ Request::is('/') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">Home</a>
-                <a href="{{ url('/about') }}" class="{{ Request::is('about') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">About</a>
-                <a href="{{ url('/project') }}" class="{{ Request::is('project') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">
-                    project
-                </a>
-                <a href="{{ url('/contact') }}" class="{{ Request::is('contact') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">
-                    contact
-                </a>
-            </nav>
-            <div class="hidden md:block w-24"></div>
-        </div>
-    </header>
+                <nav class="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
+                    <a href="{{ url('/') }}" class="{{ Request::is('/') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">Home</a>
+                    <a href="{{ url('/about') }}" class="{{ Request::is('about') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">About</a>
+                    <a href="{{ url('/project') }}" class="{{ Request::is('project*') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">Project</a>
+                    <a href="{{ url('/contact') }}" class="{{ Request::is('contact') ? 'text-gold-glow border-b border-gold-glow/50' : 'text-gray-500' }} hover:text-gold-glow transition-colors pb-1">Contact</a>
+                </nav>
+
+                <div class="hidden md:block w-24"></div>
+            </div>
+        </header>
+    <style>
+    /* 1. Kunci agar layout tidak bergeser */
+    html {
+        scrollbar-gutter: stable; /* Menyediakan ruang scrollbar secara konsisten */
+    }
+
+    /* 2. Sembunyikan Scrollbar untuk Chrome, Safari, dan Opera */
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 3. Sembunyikan Scrollbar untuk IE, Edge, dan Firefox */
+    body {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* 4. Pastikan Header tetap Solid */
+    header {
+        left: 0;
+        right: 0;
+        /* Menggunakan padding-right otomatis agar header tidak bergeser
+           saat scrollbar hilang/muncul di beberapa OS */
+        padding-right: calc(100vw - 100%);
+    }
+</style>
 
     @yield('content')
 

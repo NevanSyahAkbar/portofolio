@@ -66,6 +66,16 @@
                 </div>
                 <div class="card-glow"></div>
             </a>
+
+            <a href="https://github.com/NevanSyahAkbar" target="_blank" class="contact-card group w-full" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-content">
+                    <span class="text-[9px] text-gray-500 uppercase font-black tracking-widest mb-4 block">Nomer</span>
+                    <h3 class="text-xl font-black italic text-white group-hover:text-gold-glow transition-all duration-500 lowercase tracking-tighter">
+                       whatsapp
+                    </h3>
+                </div>
+                <div class="card-glow"></div>
+            </a>
         </div>
 
         <div class="mt-40 flex flex-col items-center gap-4" data-aos="zoom-in">
@@ -74,7 +84,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span class="text-[10px] text-white font-black uppercase tracking-[0.3em]">Currently Available</span>
+                <span class="text-[10px] text-white font-black uppercase tracking-[0.3em]">Open to work</span>
             </div>
         </div>
     </div>
